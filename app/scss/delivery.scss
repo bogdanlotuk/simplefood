@@ -1,0 +1,47 @@
+@import "vars";
+
+.delivery {
+  padding-bottom: 120px;
+
+  &__inner {
+    margin: 0 auto;
+    max-width: 1030px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__img {}
+
+  &__content {
+    max-width: 470px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  &__features {
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    position: relative;
+    color: $darkBlue-900;
+    font-size: 24px;
+    padding-left: 64px;
+    background-repeat: no-repeat;
+    background-size: 34px 34px;
+    background-position: left center;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+}
