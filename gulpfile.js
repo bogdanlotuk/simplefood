@@ -18,7 +18,10 @@ function browsersync() {
 }
 
 function styles() {
-	return src('app/scss/style.scss')
+	return src([
+    'node_modules/swiper/swiper.scss',
+    'app/scss/style.scss'
+  ])
 		.pipe(scss({outputStyle: 'compressed'}))
     .pipe(concat('style.min.css'))
     .pipe(autoprefixer({
@@ -32,6 +35,7 @@ function styles() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/swiper/swiper-bundle.min.js',
     'app/js/mixitup.min.js',
     'app/js/main.js'
   ])
@@ -45,7 +49,7 @@ function build() {
   return src([
     'app/**/*.html',
     'app/css/style.min.css',
-    'app/js/main.js'
+    'app/js/main.min.js'
   ], {base: 'app'})
   .pipe(dest('dist'))
 }

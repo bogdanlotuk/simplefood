@@ -1,0 +1,46 @@
+@import "vars";
+
+.app {
+    padding-bottom: 120px;
+
+    &__general {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__content {
+        max-width: 530px;
+    }
+
+    &__title {
+        margin-bottom: 45px;
+    }
+
+    &__text {
+        margin-bottom: 30px;
+        font-size: 20px;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
+    &__link {
+    }
+
+    &__link-img {
+        background-color: $dark;
+        border: 1px solid $gray;
+        border-radius: 7px;
+    }
+
+    &__img {
+    }
+}
